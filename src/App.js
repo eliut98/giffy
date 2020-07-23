@@ -10,7 +10,7 @@ export default function App() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    setLocation(`/gif/${query}`);
+    setLocation(`/search/${query}`);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function App() {
         />
         <button>Search</button>
       </form>
-      <Route path="/gif/:query" component={ListOfGifs} />
+      <Route path="/search/:query" component={ListOfGifs} />
     </div>
   );
 }

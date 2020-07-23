@@ -1,3 +1,7 @@
+:root {
+  --columns--: 4;
+}
+
 .app {
   width: 80%;
   margin: 1rem auto;
@@ -42,27 +46,9 @@
 }
 
 .list-of-gif {
-  display: grid;
-  grid-gap: 0.1rem;
-  margin-top: 1rem;
-}
-
-@media all and (min-width: 320px) {
-  .list-of-gif {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media all and (min-width: 768px) {
-  .list-of-gif {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .list-of-gif {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  margin: 1rem 0;
+  column-count: var(--columns--);
+  column-gap: 0.5em;
 }
 
 .list-of-gif .gif {
@@ -88,4 +74,34 @@
     #c850c0 46%,
     #ffcc70 100%
   );
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --columns--: 2;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  :root {
+    --columns--: 3;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  :root {
+    --columns--: 4;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  :root {
+    --columns--: 5;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --columns--: 6;
+  }
 }
