@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Special Thanks
+
+This is a small project to learn React, using the wonderful tutorial of [@midudev](https://github.com/midudev) 
+
 ## Available Scripts
 
 In the project directory, you can run:
