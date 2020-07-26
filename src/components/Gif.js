@@ -1,6 +1,6 @@
 import React from "react";
-
-const Gif = ({ url, title }) => {
+import { Link } from "wouter";
+const Gif = ({ id, title, url }) => {
   return (
     <figure className="gif">
       <img
@@ -10,6 +10,7 @@ const Gif = ({ url, title }) => {
           width: "100%",
         }}
       />
+      <Link to={`/gif/${id}`}>{id}</Link>
     </figure>
   );
 };

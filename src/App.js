@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Home from "./page/Home";
+import Detail from "./page/Detail";
 import Results from "./page/search/results";
 import { GifsContextProvider } from "./context/GifsContext";
 
@@ -28,6 +29,7 @@ export default function App() {
       </form>
       <GifsContextProvider>
         <Route path="/" component={Home} />
+        <Route path="/gif/:id" component={Detail} />
         <Route path="/search/:query" component={Results} />
       </GifsContextProvider>
     </div>

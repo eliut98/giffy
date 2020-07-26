@@ -10,6 +10,7 @@ export const useGifs = ({ query } = { query: null }) => {
   useEffect(() => {
     getGifs(search).then(setGifs);
     if (query) localStorage.setItem("lastQuery", query);
-  }, [query]);
+  }, [query, setGifs]);
+
   return { gifs };
 };
