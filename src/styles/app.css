@@ -49,6 +49,7 @@
   margin: 1rem 0;
   column-count: var(--columns--);
   column-gap: 0.5em;
+  min-height: 100vh;
 }
 
 .list-of-gif .gif {
