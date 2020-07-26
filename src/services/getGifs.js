@@ -4,7 +4,7 @@ export default function getGifs(query) {
   const api_url = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${api_key}`;
 
   return fetch(api_url)
-    .then((respose) => respose.json())
+    .then((response) => response.json())
     .then(({ data }) => {
       return data.map((gif) => {
         return {

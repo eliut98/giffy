@@ -1,15 +1,7 @@
-import React, { useState, useEffect } from "react";
-import getGifs from "../services/getGifs";
+import React from "react";
 import Gif from "./Gif";
 
-const ListOfGifs = ({ params }) => {
-  const { query } = params;
-  const [gifs, setGifs] = useState([]);
-
-  useEffect(() => {
-    getGifs(query).then(setGifs);
-  }, [query]);
-
+const ListOfGifs = ({ gifs }) => {
   return (
     <div className="list-of-gif">
       {gifs.map(({ url, title, id }) => (

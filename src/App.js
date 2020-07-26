@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import ListOfGifs from "./components/ListOfGifs";
+import Home from "./page/Home";
+import Results from "./page/search/results";
+import { GifsContextProvider } from "./context/GifsContext";
+
 import { Route, useLocation } from "wouter";
 
 import "./styles/app.css";
@@ -23,7 +26,10 @@ export default function App() {
         />
         <button>Search</button>
       </form>
-      <Route path="/search/:query" component={ListOfGifs} />
+      <GifsContextProvider>
+        <Route path="/" component={Home} />
+        <Route path="/search/:query" component={Results} />
+      </GifsContextProvider>
     </div>
   );
 }
