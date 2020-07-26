@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Home from "./page/Home";
 import Detail from "./page/Detail";
-import Results from "./page/search/results";
+import SearchResults from "./page/SearchResults";
 import { GifsContextProvider } from "./context/GifsContext";
 import { Route } from "wouter";
 
@@ -13,7 +13,7 @@ export default function App() {
       <GifsContextProvider>
         <Route path="/" component={Home} />
         <Route path="/gif/:id" component={Detail} />
-        <Route path="/search/:query" component={Results} />
+        <Route path="/search/:query" component={SearchResults} />
       </GifsContextProvider>
     </div>
   );

@@ -2,10 +2,11 @@ import React from "react";
 import { useGifs } from "../../hooks/useGifs";
 import ListOfGifs from "../../components/ListOfGifs";
 
-const Results =({ params }) => {
+const SearchResults = ({ params }) => {
   const { query } = params;
-  const { gifs } = useGifs(query);
+  console.log(query);
+  const { gifs } = useGifs({ query });
   return <ListOfGifs gifs={gifs} />;
-}
+};
 
-export default Results;
+export default SearchResults;
