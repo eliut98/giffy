@@ -1,17 +1,16 @@
-const api_key = "CSRdyV7LpvTC11jWnsZ4YswnbY3yyBwW";
+import { settings } from "./settings";
 
-export default function getGifs(query) {
-  const api_url = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${api_key}`;
+export default async function getGifs(query) {
+  const api_url = `${settings.API_URL}/search?q=${query}&api_key=${settings.API_KEY}`;
 
-  return fetch(api_url)
-    .then((response) => response.json())
-    .then(({ data }) => {
-      return data.map((gif) => {
-        return {
-          title: gif.title,
-          id: gif.id,
-          url: gif.images.downsized_medium.url,
-        };
-      });
-    });
+  const response = await fetch(api_url);
+  const { data } = await response.json();
+
+  return data.map((gif) => {
+    return {
+      title: gif.title,
+      id: gif.id,
+      url: gif.images.downsized_medium.url,
+    };
+  });
 }

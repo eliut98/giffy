@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "wouter";
+
 const Gif = ({ id, title, url }) => {
   return (
     <figure className="gif">

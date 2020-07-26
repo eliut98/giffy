@@ -7,5 +7,7 @@ export default function Detail({ params }) {
 
   const gif = gifs.find((gif) => gif.id === params.id);
 
+  console.log(gif)
+
   return <Gif {...gif} />;
 }
