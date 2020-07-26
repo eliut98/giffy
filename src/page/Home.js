@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocation } from "wouter";
-import { useGifs } from "../hooks/useGifs";
-import ListOfGifs from "../components/ListOfGifs";
-import TrendingGifs from "../components/TrendingGifs";
-import SearchForm from "../components/SearchForm";
+import { useGifs } from "hooks/useGifs";
+import ListOfGifs from "components/ListOfGifs";
+import TrendingGifs from "components/TrendingGifs";
+import SearchForm from "components/SearchForm";
 
 const Home = () => {
   const [_, pushLocation] = useLocation();
