@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "wouter";
 import { useGifs } from "hooks/useGifs";
 import ListOfGifs from "components/ListOfGifs";
-import TrendingGifs from "components/TrendingGifs";
+import TrendingSearches from "components/TrendingSearches";
 import SearchForm from "components/SearchForm";
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
           <ListOfGifs gifs={gifs} />
         </div>
         <div>
-          <TrendingGifs />
+          <TrendingSearches />
         </div>
       </div>
     </>
